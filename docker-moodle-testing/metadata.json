@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Moodle Docker environment for test runs",
+  "description": "This template allows you to run Behat and PHPUnit test runs against a Moodle codebase using Docker containers.",
+  "summary": "This deploys an Ubuntu VM with Docker Engine, and Moodle testing scripts.",
+  "githubUsername": "marxjohnson",
+  "dateUpdated": "2018-05-08"
+}
