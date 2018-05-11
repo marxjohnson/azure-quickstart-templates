@@ -3,7 +3,7 @@
 This template allows you to run Behat and PHPUnit test runs against a Moodle codebase using Docker containers.
 To run tests, follow the instructions in the [nightly scripts repository](https://git.in.moodle.com/integration/nightlyscripts/blob/master/runner/README.md).
 
-## Example usage:
+## Example usage
 ```
 $ # Create resource group
 $ az group create --name=moodletest --region=westeurope
@@ -17,3 +17,15 @@ $ scp -R -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no moodle@moodledocker1.weste
 $ # De-provision resource group
 $ az group delete --name=moodletest
 ```
+
+## Available parameters
+* newStorageAccountName: Unique DNS Name for the Storage Account where the Virtual Machine's disks will be placed.
+* dnsNameForPublicIP: Unique DNS Name for the Public IP used to access the Virtual Machine.
+* sshKeyData: SSH rsa public key file as a string.
+* adminUsername: Username for the Virtual Machine (default: moodle)
+* vmSize: VM size for the Docker host. (default: Standard_F1)
+* ubuntuOSVersion: The Ubuntu version for deploying the Docker containers. This will pick a fully patched image of this given Ubuntu version. Allowed values: 14.04.4-LTS, 15.10, 16.04.0-LTS (default: 16.04.0-LTS)
+* moodleRepository: Git repository URL to clone for moodle code (default: https://github.com/moodle/moodle.git)
+* moodleBranch: Git branch to checkout for moodle code (default: master)
+* nightlyscriptsRepository: Git repository URL to clone for the nightly test scripts (default: https://git.in.moodle.com/integration/nightlyscripts.git)
+* nightlyscriptsBranch: Git branch to checkout for nightly test scripts (default: master)
