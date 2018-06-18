@@ -1,7 +1,7 @@
 # Moodle Docker environment for test runs
 
 This template allows you to run Behat and PHPUnit test runs against a Moodle codebase using Docker containers.
-To run tests, follow the instructions in the [nightly scripts repository](https://git.in.moodle.com/integration/nightlyscripts/blob/master/runner/README.md).
+To run tests, follow the instructions in the [nightly scripts repository](https://git.in.moodle.com/integration/nightlyscripts/blob/master/README.md).
 
 ## Example usage
 ```
